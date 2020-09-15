@@ -215,6 +215,28 @@ https://home.openweathermap.org/api_keys
 npm install axios
 
 ----------------------------------------------------------------------------------------------------------------------
+
+#1.5 Displaying Temperature
+
+Examples of API calls:
+standard api.openweathermap.org/data/2.5/find?q=London
+
+metric api.openweathermap.org/data/2.5/find?q=London&units=metric
+
+imperial api.openweathermap.org/data/2.5/find?q=London&units=imperial
+
+
+metric은 섭씨
+
+
+
+
+npm install prop-types
+
+설치 중 에러가 발생하며 설치가 취소되었음.
+해결법 - Delete your node_modules and run 'npm i' again.
+이대로 하지않고, 다시 설치 시도했는데 잘 설치됨.
+
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
