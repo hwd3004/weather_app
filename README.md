@@ -269,6 +269,215 @@ https://docs.expo.io/guides/icons/
 아이콘을 제공함.
 
 ----------------------------------------------------------------------------------------------------------------------
+
+#2.3 Background Gradient
+
+https://docs.expo.io/versions/latest/sdk/linear-gradient/
+
+expo linear gradient
+
+터미널에
+expo install expo-linear-gradient
+
+
+
+https://uigradients.com/
+
+그라디언트 참고
+
+
+
+
+Q.
+Liufeier Today at 10:06 AM
+리액트 네이티브 날씨앱 만들기 2.3 Background Gradient 파트에서
+name={weatherOptions[condition].iconName} 이런 코드 작성을 어떻게 생각해내는거죠
+영상 보기 전에 먼저 <MaterialCommunityIcons name={weatherOptions.Clear.iconName} 이렇게 해봤더니
+맑음 아이콘 뜨길래 name={weatherOptions.condition.iconName} 하면 어떻게 되나 봤더니 안되네요.
+자바스크립트 실력이 부족해서 그런걸까요 후...
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+20 replies
+
+scKwon  24 minutes ago
+만들어놓은 weatherOptions 객체를 참조하는 방식이에요. 그 객체안에 condition 이라는 요소가 없으므로, 안되요
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+scKwon  23 minutes ago
+객체안에는 Clear, Snow, Rain 등을 넣을꺼니까, weatherOptions.Clear 는 되요 (edited) 
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+Liufeier  18 minutes ago
+배열로 참조하니깐 weatherOptions 객체선언때도 배열로 해야할거같은데 그게 아니니... 어렵네요
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+Liufeier  14 minutes ago
+Weather 컴포넌트의 인자값 condition을 받아올때 날씨이름으로 받아오니 될줄 알았는디...
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+김맥북:react:  13 minutes ago
+그래서  weatherOptions[condition] 이렇게 쓰는거에요
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+김맥북:react:  13 minutes ago
+weatherOptions.Clear = weatherOptions["Clear"]
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+김맥북:react:  13 minutes ago
+condition 안에는 프로퍼티의 이름이 string으로 들어가 있어서
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+scKwon  12 minutes ago
+객체를 배열로 접근한다라고 생각하시기 보단, 자바스크립트에서 객체는 . 연산자와 [] 연산자 두 개를 통해 접근할 수 있다라 생각하시는게 좋을같네요
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+scKwon  12 minutes ago
+아 weatherOptions.condition => weatherOptions."Clear" 로 변활 될거라고 생각하셨다는 뜻이신감
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+Liufeier  11 minutes ago
+네
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+scKwon  11 minutes ago
+. 연산자는 전자의 요소 "안" 이라는 뜻이에요. 변수가 치환되지 않아요
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+Liufeier  10 minutes ago
+변수 치환되는 방법으로 그럼 배열 말곤 없는건가요?
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+김맥북:react:  10 minutes ago
+네
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+Liufeier  10 minutes ago
+허...
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+김맥북:react:  10 minutes ago
+배열은 아닙니다
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+김맥북:react:  9 minutes ago
+표현 방법이 배열이랑 같을 뿐
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+김맥북:react:  9 minutes ago
+배열이라고 표현하는 건 혼란만..
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+Liufeier  9 minutes ago
+그렇군요
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+scKwon  8 minutes ago
+[] 연산자라고 이해하세용. 배열보단
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+Liufeier  2 minutes ago
+답변 감사합니다.
+
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
